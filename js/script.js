@@ -1,4 +1,6 @@
 
+const lista = document.getElementById("lista");
+
 const team = [
     {
         imgProfile: "img/wayne-barnett-founder-ceo.jpg",
@@ -36,4 +38,13 @@ console.log("array dei membri del team",team);
 
 for(let member of team){
     console.log("singolo membro del team",member);
+    for (let key in member){
+        lista.innerHTML += `
+            <li> ${key}: ${member[key]} </li>
+        `
+    }
+
+    lista.innerHTML += `
+        <li> ------- </li>
+    `
 }
