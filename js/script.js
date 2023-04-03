@@ -38,11 +38,16 @@ console.log("array dei membri del team",team);
 
 for(let member of team){
     console.log("singolo membro del team",member);
-    for (let key in member){
+
+    lista.innerHTML += `<img src="${member.imgProfile}">`;
+    lista.innerHTML += `<h4>${member.fullName}</h4>`
+    lista.innerHTML += `<h6>${member.role}</h6>`
+
+    /*for (let key in member){
         lista.innerHTML += `
             <li> ${key}: ${member[key]} </li>
         `
-    }
+    }*/
 
     lista.innerHTML += `
         <li> ------- </li>
