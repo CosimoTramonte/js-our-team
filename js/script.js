@@ -1,5 +1,6 @@
 
 const lista = document.getElementById("lista");
+const container = document.querySelector('.container');
 
 const team = [
     {
@@ -39,17 +40,23 @@ console.log("array dei membri del team",team);
 for(let member of team){
     console.log("singolo membro del team",member);
 
-    lista.innerHTML += `<img src="${member.imgProfile}">`;
-    lista.innerHTML += `<h4>${member.fullName}</h4>`
-    lista.innerHTML += `<h6>${member.role}</h6>`
+    container.innerHTML += `
+        <div class="card">
+            <div class="card-body">
+                <img src="${member.imgProfile}">
+                <h4>${member.fullName}</h4>
+                <h6>${member.role}</h6>
+            </div>
+        </div>
+    `;
 
     /*for (let key in member){
         lista.innerHTML += `
             <li> ${key}: ${member[key]} </li>
         `
-    }*/
+    }
 
     lista.innerHTML += `
         <li> ------- </li>
-    `
+    `*/
 }
